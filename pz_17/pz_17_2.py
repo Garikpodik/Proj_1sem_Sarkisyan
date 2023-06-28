@@ -23,7 +23,7 @@ class Square(Figure):
     def perimeter(self):
         return 4 * self.width
 
-# Пример использования классов
+
 rectangle = Rectangle(5, 10)
 print("Площадь прямоугольника:", rectangle.area())
 print("Периметр прямоугольника:", rectangle.perimeter())
