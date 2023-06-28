@@ -24,9 +24,7 @@ class Square(Figure):
         return 4 * self.width
 
 # Пример использования классов
-a=int(input('Введите первую сторону:'))
-b=int(input('Введите вторую сторону:'))
-rectangle = Rectangle(a,b)
+rectangle = Rectangle(5, 10)
 print("Площадь прямоугольника:", rectangle.area())
 print("Периметр прямоугольника:", rectangle.perimeter())
 
