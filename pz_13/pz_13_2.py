@@ -1,8 +1,17 @@
 #Для каждой строки матрицы с нечетным номером найти среднее арифметическое ее элементов.
 
-from random import randint
+import random
+import numpy as np
 
-len_m = int(input('Введите размер матрицы: '))  # ввод размер матрицы
+# Создание матрицы 5x5 со случайными элементами от 0 до 9
+matrix = np.random.randint(0, 10, (3, 3))
 
-matrix = [[randint(-100, 100) for _ in range(len_m)] for _ in range(len_m)] # создание матрицы
+# Вывод матрицы
+print("Матрица:")
+print(matrix)
 
+# Нахождение среднего арифметического элементов для каждой строки с нечетным номером
+for i in range(len(matrix)):
+    if i % 2 != 0:
+        average = np.mean(matrix[i])
+        print("Среднее арифметическое элементов в строке", i+1, ":", average)

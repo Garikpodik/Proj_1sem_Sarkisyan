@@ -1,18 +1,17 @@
 # В матрице найти минимальный элемент в предпоследнем столбце.
 
-from random import randint
+import random
+import numpy as np
 
-len_m = int(input('Введите размер матрицы: '))  # ввод размер матрицы
+# Создание матрицы 5x5 со случайными элементами от 0 до 9
+matrix = np.random.randint(0, 10, (3, 3))
 
-matrix =[]
-matrix = [[randint(-100, 100) for _ in range(len_m)] for _ in range(len_m)] # создание матрицы
-#for i in matrix:
- #   print(*i, sep='\t' )
+# Вывод матрицы
+print("Матрица:")
+print(matrix)
 
-b = list(matrix[:-1])
+# Нахождение минимального элемента в предпоследнем столбце
+min_element = np.min(matrix[:, -2])
 
-#for i in b:
- #  min=min(i)
-
-
-print(f'Матрица:{matrix},\n Минимальный элемент предпсоледнего стобца:{b}')
+# Вывод минимального элемента
+print("Минимальный элемент в предпоследнем столбце:", min_element)
